@@ -1311,13 +1311,14 @@ export type VehiclesEdge = {
 export type AllFilmsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type AllFilmsQuery = { __typename?: 'Root', allFilms?: { __typename?: 'FilmsConnection', films?: Array<{ __typename?: 'Film', title?: string | null, director?: string | null, releaseDate?: string | null, speciesConnection?: { __typename?: 'FilmSpeciesConnection', species?: Array<{ __typename?: 'Species', name?: string | null, classification?: string | null, homeworld?: { __typename?: 'Planet', name?: string | null } | null } | null> | null } | null } | null> | null } | null };
+export type AllFilmsQuery = { __typename?: 'Root', allFilms?: { __typename?: 'FilmsConnection', films?: Array<{ __typename?: 'Film', id: string, title?: string | null, director?: string | null, releaseDate?: string | null, speciesConnection?: { __typename?: 'FilmSpeciesConnection', species?: Array<{ __typename?: 'Species', name?: string | null, classification?: string | null, homeworld?: { __typename?: 'Planet', name?: string | null } | null } | null> | null } | null } | null> | null } | null };
 
 
 export const AllFilmsDocument = gql`
     query AllFilms {
   allFilms {
     films {
+      id
       title
       director
       releaseDate

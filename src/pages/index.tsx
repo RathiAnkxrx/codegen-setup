@@ -7,17 +7,10 @@ export default function Home() {
     <main className={"main center"}>
       <div className="grid">
         {data?.allFilms?.films?.map((film) => (
-          <div key={+Math.random()} className="movie">
-            <h2>{film?.title}</h2>
-            <h3>Director : {film?.director}</h3>
-
-            <div className="species">
-              {film?.speciesConnection?.species?.map((species) => (
-                <p key={+Math.random()} className="tags">
-                  {species?.name}
-                </p>
-              ))}
-            </div>
+          <div key={film?.id}>
+            {film?.speciesConnection?.species?.map((spe) => (
+              <div key={spe?.name}>{spe?.homeworld?.name}</div>
+            ))}
           </div>
         ))}
       </div>

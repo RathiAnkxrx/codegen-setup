@@ -53,3 +53,17 @@
   max-width: 100%;
   gap: 30px;
 }
+
+/* {data?.allFilms?.films?.map((film) => (
+  <div key={film?.title} className="movie">
+    <h2>{film?.title}</h2>
+    <h3>Director : {film?.director}</h3>
+    <div className="species">
+      {film?.speciesConnection?.species?.map((species) => (
+        <p key={+Math.random()} className="tags">
+          {species?.name}
+        </p>
+      ))}
+    </div>
+  </div>
+))} */
