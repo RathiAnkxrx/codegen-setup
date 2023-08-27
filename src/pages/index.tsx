@@ -3,6 +3,8 @@ import { useAllFilmsQuery } from "../types/graphql";
 export default function Home() {
   const { data } = useAllFilmsQuery();
 
+  console.log("faultu k change");
+
   return (
     <main className={"main center"}>
       <div className="grid">
